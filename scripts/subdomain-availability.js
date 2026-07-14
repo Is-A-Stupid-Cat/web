@@ -30,7 +30,7 @@ async function fetchReservedDomains() {
             if (subdomain) {
                 searchDomain.placeholder = `e.g. ${subdomain}`;
             } else {
-                searchDomain.placeholder = "e.g. william";
+                searchDomain.placeholder = "e.g. Ari";
             }
             
         }
@@ -63,7 +63,7 @@ async function check() {
 
     isSearching = true;
     try {
-        const response = await fetch(`https://raw.githubusercontent.com/is-a-dev/register/main/domains/${search}.json`);
+        const response = await fetch(`https://raw.githubusercontent.com/is-a-stupid-cat/register/main/domains/${search}.json`);
         if (!response.ok && response.status !== 404) throw new Error("Something went wrong");
 
         const data = response.ok ? await response.json() : null;
